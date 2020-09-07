@@ -16,39 +16,45 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edtDose"/>
+        android:id="@+id/edtDose"
+        android:inputType="numberDecimal"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Peso"/>
+        android:text="Peso (KG)"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edtPeso"/>
+        android:id="@+id/edtPeso"
+        android:inputType="numberDecimal"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Concentração"
-        android:gravity="center"/>
+        android:text="Concentração (%)"
+        android:gravity="center" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edtConcentracao"/>
+        android:id="@+id/edtConcentracao"
+        android:inputType="number"
+        android:text="1"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnCalcular"
-        android:text="Calcular"/>
+        android:text="Calcular"
+        android:onClick="calcular"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txvResultado"/>
+        android:id="@+id/txvResultado"
+        android:layout_gravity="center"/>
 
 
 </LinearLayout>

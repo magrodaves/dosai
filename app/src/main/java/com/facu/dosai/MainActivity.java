@@ -18,28 +18,33 @@ public class MainActivity extends AppCompatActivity {
     private Button btnCalcular;
     private TextView txvResultado;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         edtConcentracao = (EditText) findViewById(R.id.edtConcentracao);
-        edtDose = (EditText) findViewById(R.id.edtConcentracao);
+        edtDose = (EditText) findViewById(R.id.edtDose);
         edtPeso = (EditText) findViewById(R.id.edtPeso);
         btnCalcular = (Button) findViewById(R.id.btnCalcular);
         txvResultado = (TextView) findViewById(R.id.txvResultado);
+
     }
 
     public void calcular (View view){
-
         double doseStr = Double.valueOf(edtDose.getText().toString());
         double pesoStr = Double.valueOf(edtPeso.getText().toString());
         double concentracaoStr = Double.valueOf(edtConcentracao.getText().toString());
+        Double result = 0.0;
 
-        String result;
-        result = valueOf((pesoStr * doseStr) / concentracaoStr);
 
-        txvResultado.setText(result);
-
+        if(concentracaoStr == 1){
+            result = pesoStr * doseStr;
+        }
+        if(concentracaoStr > 0) {
+            result = ((pesoStr * doseStr) / concentracaoStr);
+        }
+        txvResultado.setText(result.toString());
     }
 }
