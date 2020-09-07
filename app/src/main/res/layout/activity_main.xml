@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dose (ml)"
+        android:text="@string/dose_ml"
         android:gravity="center_horizontal" />
 
     <EditText
@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Peso (KG)"/>
+        android:text="@string/peso_kg"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Concentração (%)"
+        android:text="@string/concentracao"
         android:gravity="center" />
     <EditText
         android:layout_width="match_parent"
