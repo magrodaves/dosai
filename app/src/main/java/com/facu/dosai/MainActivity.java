@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import static java.lang.String.*;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText edtDose;
@@ -34,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         double pesoStr = Double.valueOf(edtPeso.getText().toString());
         double concentracaoStr = Double.valueOf(edtConcentracao.getText().toString());
 
-        double result = (pesoStr * doseStr) / concentracaoStr;
+        String result;
+        result = valueOf((pesoStr * doseStr) / concentracaoStr);
 
         txvResultado.setText(result);
 
